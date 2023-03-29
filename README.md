@@ -1,2 +1,3 @@
-# terraform-spacelift-msteams
-Policy-based integration between Spacelift and Microsoft Teams
+# Spacelift-Microsoft Teams notification integration
+
+TODO: Add description
