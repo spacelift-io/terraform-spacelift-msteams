@@ -203,9 +203,10 @@ version_facts[{ "name": "Space", "value": value }] {
 }
 
 version_facts[{ "name": name, "value": value }] {
-    run := input.module_version.version.test_runs[_]
+    some i
+    run := input.module_version.version.test_runs[i]
 
-    name := sprintf("Test case %q", [run.title])
+    name := sprintf("Test case #%02d: %q", [i + 1, run.title])
     value := sprintf("[%s](%s)", [
         run.state,
         sprintf("%s/run/%s", [version_url, run.id]),
