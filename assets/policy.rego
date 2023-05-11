@@ -6,7 +6,7 @@ success_color = "17bd81"
 warning_color = "f2a40b"
 
 # START run state changes.
-stack_url = sprintf("https://%s.spacelift.io/stack/%s", [
+stack_url = sprintf("https://%s.app.spacelift.io/stack/%s", [
     input.account.name,
     input.run_updated.stack.id,
 ])
@@ -129,7 +129,7 @@ as_html_list(resources) = sprintf("<ul>%s</ul>", [
 
 
 # START module version state changes.
-module_url := sprintf("https://%s.spacelift.io/module/%s", [
+module_url := sprintf("https://%s.app.spacelift.io/module/%s", [
     input.account.name,
     input.module_version.module.id,
 ])
