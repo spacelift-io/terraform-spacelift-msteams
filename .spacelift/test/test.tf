@@ -10,6 +10,7 @@ terraform {
 provider "spacelift" {}
 
 variable "spacelift_run_id" {}
+variable "spacelift_space_id" {}
 
 variable "spacelift_url" {
   type    = string
@@ -20,7 +21,7 @@ module "msteams-integration" {
   source = "../../"
 
   channel_name = var.spacelift_run_id
-  space_id     = "public-modules-01GVNH2CJKSKHRSMDPBMQ3WZT9"
+  space_id     = var.spacelift_space_id
   webhook_url  = "https://devnull-as-a-service.com/dev/null"
   spacelift_url = var.spacelift_url
 }
