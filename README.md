@@ -22,9 +22,11 @@ module "spacelift_msteams" {
 
 Based on this configuration, the module will send notifications to the `My channel` channel in Microsoft Teams that look like these:
 
-![Run notification](https://docs.spacelift.io/assets/screenshots/msteams-run-state.png)
+![Run pending confirmation notification](https://docs.spacelift.io/assets/screenshots/msteams-run-pending.png)
 
-![Version notification](https://docs.spacelift.io/assets/screenshots/msteams-module-version.png)
+![Run finished notification](https://docs.spacelift.io/assets/screenshots/msteams-run-finished.png)
+
+![Module version notification](https://docs.spacelift.io/assets/screenshots/msteams-module-version.png)
 
 ## Prerequisites
 
