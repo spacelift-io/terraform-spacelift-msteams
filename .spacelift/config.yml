@@ -4,3 +4,14 @@ module_version: 0.2.0
 tests:
   - name: Default test
     project_root: ".spacelift/test"
+  - name: Test with a valid custom spacelift_url
+    project_root: ".spacelift/test"
+    environment:
+      TF_VAR_spacelift_url: "https://devnull-as-a-service.com"
+  - name: Test with an invalid custom spacelift_url
+    project_root: ".spacelift/test"
+    negative: true
+    environment:
+      TF_VAR_spacelift_url: "devnull-as-a-service.com/"
+
+
