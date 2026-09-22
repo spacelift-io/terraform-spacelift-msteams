@@ -1,5 +1,7 @@
 # Spacelift-Microsoft Teams notification integration
 
+This integration is outdated. Spacelift offers a native [account-level Microsoft Teams integration](https://docs.spacelift.io/concepts/identity-access-management/external-accounts#ms-teams).
+
 Terraform module providing a notification-based integration between [Spacelift](https://spacelift.io) and [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software). It creates a webhook in Spacelift that will send notifications to a Microsoft Teams channel when:
 
 - a [tracked run](https://docs.spacelift.io/concepts/run/tracked) [needs confirmation](https://docs.spacelift.io/concepts/run/tracked#unconfirmed);
