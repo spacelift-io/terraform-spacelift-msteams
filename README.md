@@ -14,11 +14,14 @@ The official documentation for this integration is available in [here](https://d
 module "spacelift_msteams" {
   source = "spacelift-io/msteams/spacelift"
 
-  channel_name = "My channel"
-  space_id     = "root"
-  webhook_url  = "https://outlook.office.com/webhook/..."
+  channel_name                 = "My channel"
+  notification_policy_filepath = "${path.module}/policies/msteams.rego" # Optional
+  space_id                     = "root"
+  webhook_url                  = "https://outlook.office.com/webhook/..."
 }
 ```
+
+When `notification_policy_filepath` is omitted, the module uses its bundled `assets/policy.rego` policy.
 
 Based on this configuration, the module will send notifications to the `My channel` channel in Microsoft Teams that look like these:
 
