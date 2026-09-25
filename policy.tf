@@ -3,6 +3,6 @@ resource "spacelift_policy" "msteams-integration" {
   type     = "NOTIFICATION"
   space_id = var.space_id
 
-  body   = file("${path.module}/assets/policy.rego")
+  body   = file(coalesce(var.notification_policy_filepath, "${path.module}/assets/policy.rego"))
   labels = ["msteams"]
 }
